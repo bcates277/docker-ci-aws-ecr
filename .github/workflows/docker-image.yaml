@@ -1,4 +1,4 @@
-name: Build and Push Node.js Image to AWS ECR
+r-name: Build and Push Node.js Image to AWS ECR
 
 on:
   push:
@@ -16,8 +16,8 @@ jobs:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: AKIAYKFQQWBIMHPF6TQV
-        aws-secret-access-key: 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
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID  }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
     - name: Log in to AWS ECR
@@ -41,7 +41,7 @@ jobs:
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.get-version.outputs.version }} .
       env:
         ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}
-        ECR_REPOSITORY: hitc-docker-cicd-ecr
+        ECR_REPOSITORY: ecr_test_repo
 
     - name: Tag Docker image with semantic version
       run: |
