@@ -44,7 +44,7 @@ git commit -m "Set up Docker build and push workflow"
 git push origin main
 ```
 
-3. Navigate to the "Actions" tab on GitHub to monitor the workflow's execution.
+3. Navigate to the "Actions" tab on GitHub to monitor the workflow's execution..
 
 4. Once the workflow is triggered (e.g., on each push to the main branch), it will build the Docker image and push it to AWS ECR automatically.
 
