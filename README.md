@@ -48,7 +48,7 @@ git push origin main
 
 4. Once the workflow is triggered (e.g., on each push to the main branch), it will build the Docker image and push it to AWS ECR automatically.
 
-7. Check your AWS account under ECR service, look for the newly created Docker image.
+7. Check your AWS account under ECR service, look for the newly created Docker image..
 
 ### Check out our YouTube Tutorial!
 For a comprehensive step-by-step guide on setting up and using this automated workflow, watch our tutorial video on YouTube. In the video, we walk you through the entire process, from configuring the Dockerfile, nodejs + dependencies, and GitHub Actions workflow to pushing Docker images to AWS ECR.
